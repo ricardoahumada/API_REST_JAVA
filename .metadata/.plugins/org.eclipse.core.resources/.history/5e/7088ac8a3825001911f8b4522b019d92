@@ -1,0 +1,5 @@
+package es.bit.models;
+
+public class Usuario {
+
+}

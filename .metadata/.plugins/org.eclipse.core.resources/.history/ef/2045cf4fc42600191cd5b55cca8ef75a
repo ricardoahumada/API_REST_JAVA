@@ -1,0 +1,5 @@
+package es.bit.persistence;
+
+public class UsuariosManager {
+
+}

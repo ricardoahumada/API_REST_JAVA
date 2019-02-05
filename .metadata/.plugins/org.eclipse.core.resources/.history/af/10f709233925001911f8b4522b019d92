@@ -1,0 +1,17 @@
+package es.bit.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.bit.models.Tarea;
+import es.bit.models.Usuario;
+
+public class TareasService {
+
+	private static List<Tarea> tareas;
+	static {
+		tareas= new ArrayList();
+		
+	}
+	
+}
