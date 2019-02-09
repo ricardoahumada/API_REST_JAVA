@@ -1,5 +1,8 @@
 es\bit\models\Tarea.class
+es\bit\rest\UsuariosService.class
 es\bit\models\Proyecto.class
 es\bit\models\Usuario.class
+es\bit\models\StatusMessage.class
+es\bit\persistence\UsuariosManager.class
 es\bit\rest\JerseyService.class
 es\bit\rest\TareasService.class

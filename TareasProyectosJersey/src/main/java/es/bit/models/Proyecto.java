@@ -11,8 +11,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="proyecto")
+@JsonIgnoreProperties(value = { "responsable" })
 public class Proyecto {
 
 	@Id
@@ -30,6 +34,7 @@ public class Proyecto {
 	
 	@ManyToOne
     @JoinColumn(name="responsable", nullable=false)
+	@JsonIgnore
 	public Usuario responsable;
 	
 	public Proyecto() {
@@ -78,7 +83,7 @@ public class Proyecto {
 	public Usuario getResponsable() {
 		return responsable;
 	}
-
+	
 	public void setResponsable(Usuario responsable) {
 		this.responsable = responsable;
 	}

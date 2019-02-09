@@ -1,4 +1,5 @@
- curl localhost:8080/TareasProyectosJersey/rest/usuarios -v
+#USUARIOS
+curl localhost:8080/TareasProyectosJersey/rest/usuarios -v
  
 curl localhost:8080/TareasProyectosJersey/rest/usuarios/1 -v
 curl localhost:8080/TareasProyectosJersey/rest/usuarios/10 -v
@@ -9,3 +10,13 @@ curl -H "Content-Type: application/json" -X PUT -d "{\"uid\":2,\"nombre\":\"Ana 
 
 curl -H "Content-Type: application/json" -X DELETE curl localhost:8080/TareasProyectosJersey/rest/usuarios/5 -v
 curl -H "Content-Type: application/json" -X DELETE curl localhost:8080/TareasProyectosJersey/rest/usuarios/15 -v
+
+#TAREAS
+curl localhost:8080/TareasProyectosJersey/rest/tareas -v
+
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":0,\"nombre\":\"Generar git\",\"duracion\":3.0,\"proyecto\":1}" localhost:8080/TareasProyectosJersey/rest/tareas -v
+
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":0,\"nombre\":\"Tomar requerimientos\",\"duracion\":20.0,\"proyecto\":2}" localhost:8080/TareasProyectosJersey/rest/tareas -v
+
+#PROYECTOS
+curl localhost:8080/TareasProyectosJersey/rest/proyectos -v

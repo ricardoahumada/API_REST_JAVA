@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TareasProyectosJersey" project="TareasProyectosJersey" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="es.bit.models.UsuarioTest" time="0.878">
+    <testcase name="testSession" classname="es.bit.models.UsuarioTest" time="0.878"/>
+  </testsuite>
+  <testsuite name="es.bit.persistence.ProyectosManagerTest" time="1.543">
+    <testcase name="testGetProyectos" classname="es.bit.persistence.ProyectosManagerTest" time="1.543"/>
+  </testsuite>
+  <testsuite name="es.bit.persistence.TareasManagerTest" time="0.611">
+    <testcase name="testGetTareas" classname="es.bit.persistence.TareasManagerTest" time="0.611"/>
+  </testsuite>
+</testrun>

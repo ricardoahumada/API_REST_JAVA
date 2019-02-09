@@ -1,0 +1,31 @@
+package es.bit.persistence;
+
+import static org.junit.Assert.*;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class TareasManagerTest {
+
+	private static SessionFactory sf = null;
+
+	@BeforeClass
+	public static void createSessionFactory() {
+		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	}
+
+	@Test
+	public void testGetTareas() {
+		try {
+			TareasManager.getInstance().getTareas();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			fail();
+		}
+	}
+
+}

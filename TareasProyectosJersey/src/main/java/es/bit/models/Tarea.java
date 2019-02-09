@@ -8,6 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import es.bit.persistence.ProyectosManager;
 
 @Entity
 @Table(name="tarea")
@@ -24,11 +30,17 @@ public class Tarea {
 	
 	@ManyToOne
     @JoinColumn(name="proyecto", nullable=false)
+	@JsonIgnore
 	private Proyecto proyecto;
+	
+	@Transient
+	@JsonProperty("proyecto")
+	private int pid;
 	
 	@ManyToOne
     @JoinColumn(name="responsable", nullable=false)	
-	private Usuario responsable;
+	@JsonIgnore
+	private Usuario responsable= new Usuario(1, "", "", "");
 	
 	public Tarea() {
 		
@@ -82,7 +94,16 @@ public class Tarea {
 	public void setResponsable(Usuario responsable) {
 		this.responsable = responsable;
 	}
-	
-	
+
+	public int getPid() {
+		this.pid=this.proyecto.getPid();
+		return pid;
+	}
+
+	public void setPid(int pid) throws Exception{
+		this.proyecto=ProyectosManager.getInstance().getProyecto(pid);
+		this.pid = pid;
+	}
+		
 
 }
