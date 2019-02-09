@@ -26,6 +26,13 @@ import es.bit.persistence.UsuariosManager;
 public class TareasService {
 	private static Logger logger = Logger.getLogger("TareasService");
 
+	private static List<Tarea> tareas;
+	static {
+		tareas = new ArrayList();
+		tareas.add(new Tarea(1, "Crear site", 20, new Proyecto(), new Usuario()));
+		tareas.add(new Tarea(2, "Lanzar pruebas pre", 10, new Proyecto(), new Usuario()));
+	}
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getTareas() {

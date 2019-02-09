@@ -22,18 +22,20 @@ import es.bit.models.Usuario;
 import es.bit.persistence.TareasManager;
 import es.bit.persistence.UsuariosManager;
 
-@Path("/tareas")
-public class TareasService {
-	private static Logger logger = Logger.getLogger("TareasService");
+@Path("/proyectos")
+public class ProyectosService {
+	private static Logger logger = Logger.getLogger("ProyectosService");
+
+	private static List<Proyecto> proyectos;
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getTareas() {
+	public Response getProyectos() {
 
 		try {
-			List<Tarea> tareas = TareasManager.getInstance().getTareas();
+			List<Proyecto> proyectos = ProyectosManager.getInstance().getProyectos();
 
-			return Response.status(Response.Status.OK).entity(tareas).build();
+			return Response.status(Response.Status.OK).entity(proyectos).build();
 
 		} catch (Exception e) {
 			logger.severe("!!!!Exception:" + e.getMessage());
@@ -44,15 +46,15 @@ public class TareasService {
 	}
 
 	@GET()
-	@Path("/{tid}")
+	@Path("/{pid}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getUser(@PathParam("tid") int tid) {
+	public Response getUser(@PathParam("pid") int pid) {
 
-		Tarea tarea;
+		Proyecto proyecto;
 		try {
-			tarea = TareasManager.getInstance().getTarea(tid);
-			return Response.status((tarea != null) ? Response.Status.OK : Response.Status.NOT_FOUND)
-					.entity((tarea != null) ? tarea
+			proyecto = ProyectosManager.getInstance().getProyecto(pid);
+			return Response.status((proyecto != null) ? Response.Status.OK : Response.Status.NOT_FOUND)
+					.entity((proyecto != null) ? proyecto
 							: new StatusMessage(Response.Status.NOT_FOUND.getStatusCode(), "No encontrado"))
 					.build();
 		} catch (Exception e) {
@@ -67,10 +69,10 @@ public class TareasService {
 	@POST()
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response addTarea(Tarea nuevo) {
+	public Response addProyecto(Proyecto nuevo) {
 
 		try {
-			int nid = TareasManager.getInstance().createTarea(nuevo);
+			int nid = ProyectosManager.getInstance().createProyecto(nuevo);
 			nuevo.setId(nid);
 			return Response.status(Response.Status.CREATED).entity(nuevo).build();
 		} catch (Exception e) {
@@ -85,12 +87,12 @@ public class TareasService {
 	@PUT()
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response updateUser(Tarea tarea) {
+	public Response updateUser(Proyecto proyecto) {
 
 		try {
-			boolean isOK = TareasManager.getInstance().updateTarea(tarea);
+			boolean isOK = ProyectosManager.getInstance().updateProyecto(proyecto);
 			return Response.status(isOK ? Response.Status.OK : Response.Status.NOT_FOUND)
-					.entity(isOK ? tarea : new StatusMessage(Response.Status.NOT_FOUND.getStatusCode(), "No existe"))
+					.entity(isOK ? proyecto : new StatusMessage(Response.Status.NOT_FOUND.getStatusCode(), "No existe"))
 					.build();
 		} catch (Exception e) {
 			logger.severe("!!!!Exception:" + e.getMessage());
@@ -107,9 +109,9 @@ public class TareasService {
 	public Response deleteUser(@PathParam("pid") int pid) {
 
 		try {
-			Tarea Tarea = TareasManager.getInstance().getTarea(pid);
-			if (Tarea != null) {
-				boolean isOK = TareasManager.getInstance().deleteTarea(Tarea);
+			Proyecto Proyecto = ProyectosManager.getInstance().getProyecto(pid);
+			if (Proyecto != null) {
+				boolean isOK = ProyectosManager.getInstance().deleteProyecto(Proyecto);
 				return Response.status(Response.Status.OK)
 						.entity(new StatusMessage(Response.Status.OK.getStatusCode(), "Borrado")).build();
 			} else {
@@ -125,4 +127,5 @@ public class TareasService {
 		}
 
 	}
+
 }

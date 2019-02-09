@@ -14,9 +14,9 @@ curl -H "Content-Type: application/json" -X DELETE curl localhost:8080/TareasPro
 #TAREAS
 curl localhost:8080/TareasProyectosJersey/rest/tareas -v
 
-curl -H "Content-Type: application/json" -X POST -d "{\"pid\":0,\"nombre\":\"Generar git\",\"duracion\":3.0,\"proyecto\":1}" localhost:8080/TareasProyectosJersey/rest/tareas -v
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":0,\"nombre\":\"Generar git\",\"duracion\":3.0,\"proyecto\":1}" localhost:8080/TareasProyectosJersey/rest/tareas -v
 
-curl -H "Content-Type: application/json" -X POST -d "{\"pid\":0,\"nombre\":\"Tomar requerimientos\",\"duracion\":20.0,\"proyecto\":2}" localhost:8080/TareasProyectosJersey/rest/tareas -v
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":0,\"nombre\":\"Tomar requerimientos\",\"duracion\":20.0,\"proyecto\":2}" localhost:8080/TareasProyectosJersey/rest/tareas -v
 
 #PROYECTOS
 curl localhost:8080/TareasProyectosJersey/rest/proyectos -v

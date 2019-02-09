@@ -35,7 +35,7 @@ public class Proyecto {
 	@ManyToOne
     @JoinColumn(name="responsable", nullable=false)
 	@JsonIgnore
-	public Usuario responsable= new Usuario(1, "", "", "");
+	public Usuario responsable;
 	
 	public Proyecto() {
 	}
