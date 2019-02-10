@@ -1,6 +1,0 @@
-<html>
-<body>
-	<h2>Tareas Proyectos App</h2>
-	<p>Username from session : ${sessionScope.userDTO}</p>
-</body>
-</html>

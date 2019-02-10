@@ -11,13 +11,8 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>jersey-serlvet</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
-	</servlet-mapping>
-	
-	<!-- CORS -->
-	<!-- <filter>
+<!-- CORS -->
+	<filter>
 		<filter-name>CORS</filter-name>
 		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
 
@@ -43,7 +38,7 @@
 
 		<init-param>
 			<param-name>cors.supportedHeaders</param-name>
-			<param-value>*, Content-Type, X-Requested-With, username, password, token</param-value>
+			<param-value>*, Content-Type, X-Requested-With, username, password, token,Accept, Origin, Last-Modified</param-value>
 		</init-param>
 
 		<init-param>
@@ -60,5 +55,12 @@
 	<filter-mapping>		
 		<filter-name>CORS</filter-name>
 		<url-pattern>*</url-pattern>
-	</filter-mapping> -->
+	</filter-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>

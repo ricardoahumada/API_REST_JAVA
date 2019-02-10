@@ -1,7 +1,0 @@
-<web-app version="3.0">
-	<display-name>Tareas y Proyectos RESTEasy Application</display-name>
-	<context-param>
-		<param-name>resteasy.servlet.mapping.prefix</param-name>
-		<param-value>/rest</param-value>
-	</context-param>
-</web-app>

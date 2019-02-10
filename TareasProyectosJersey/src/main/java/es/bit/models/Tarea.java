@@ -20,7 +20,7 @@ import es.bit.persistence.ProyectosManager;
 public class Tarea {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonProperty("pid")
+	@JsonProperty("tid")
 	private int id;
 	
 	@Column

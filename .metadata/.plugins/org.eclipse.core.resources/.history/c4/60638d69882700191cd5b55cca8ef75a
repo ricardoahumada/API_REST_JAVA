@@ -1,7 +1,0 @@
- curl localhost:8080/TareasProyectosJersey/rest/usuarios -v
- 
-  curl localhost:8080/TareasProyectosJersey/rest/usuarios/1 -v
-  curl localhost:8080/TareasProyectosJersey/rest/usuarios/10 -v
-  
-  curl -H "Content-Type: application/json" -X POST -d "{\"uid\":0,\"nombre\":\"Luis\",\"email\":\"l@l.com\",\"foto\":\"l.jpg\"}" localhost:8080/TareasProyectosJersey/rest/usuarios -v
-  

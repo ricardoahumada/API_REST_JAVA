@@ -1,7 +1,0 @@
-CREATE SCHEMA `employees` ;
-
-USE mysql;
-
-CREATE USER 'tareas_user'@'localhost' IDENTIFIED BY 'tar123';
-GRANT ALL PRIVILEGES ON employees.* TO 'tareas_user'@'localhost';
-FLUSH PRIVILEGES;

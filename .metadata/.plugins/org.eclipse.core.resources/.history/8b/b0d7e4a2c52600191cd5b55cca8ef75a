@@ -1,8 +1,0 @@
-package es.bit.rest;
-
-import javax.ws.rs.Path;
-
-@Path("/usuarios")
-public class UsuariosService {
-
-}
