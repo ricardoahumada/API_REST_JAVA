@@ -20,3 +20,5 @@ curl -H "Content-Type: application/json" -X POST -d "{\"pid\":0,\"nombre\":\"Tom
 
 #PROYECTOS
 curl localhost:8080/TareasProyectosJersey/rest/proyectos -v
+
+curl -H "Content-Type: application/json" -X POST -d "{\"pid\":0,\"titulo\":\"Proyecto Nuevo\",\"fecha_inicio\":1556056800000,\"fecha_fin\":1549580400000}" localhost:8080/TareasProyectosJersey/rest/proyectos -v
