@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJersey\src\main\webapp\WEB-INF\web.xml"/>
 			<item value="D:\Shared\MyFiles\BIT\APIREST\TareasProyectosJersey\pom.xml"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -64,6 +65,7 @@
 			<item value="Bit"/>
 		</list>
 		<list key="artifactId">
+			<item value="TareasProyectosSpring"/>
 			<item value="SpringAPIClient"/>
 			<item value="JerseyAPIClient"/>
 			<item value="BasicAPIClient"/>
