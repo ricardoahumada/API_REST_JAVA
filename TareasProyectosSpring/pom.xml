@@ -43,7 +43,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		
+
 		<!-- jackson -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -55,7 +55,7 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 			<version>${jackson.library}</version>
 		</dependency>
-		
+
 		<!-- hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -69,7 +69,9 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.39</version>
 		</dependency>
+
 	</dependencies>
+
 	<build>
 		<finalName>TareasProyectosSpring</finalName>
 		<plugins>
