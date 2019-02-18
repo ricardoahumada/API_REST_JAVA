@@ -3,6 +3,7 @@ package es.bit.rest;
 import java.util.List;
 import java.util.logging.Logger;
 
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -24,12 +25,12 @@ public class UsuariosService {
 	private static Logger logger = Logger.getLogger("UsuariosService");
 
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Response getUsers() {
 
 		List<Usuario> usuarios;
 		try {
-			usuarios = UsuariosManager.getInstance().getUsuarios();
+			usuarios = UsuariosManager.getInstance().getUsuarios();			
 			return Response.status(Response.Status.OK).entity(usuarios).build();
 		} catch (Exception e) {
 			logger.severe("!!!!Exception:" + e.getMessage());
@@ -42,7 +43,7 @@ public class UsuariosService {
 
 	@GET()
 	@Path("/{uid}")
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Response getUser(@PathParam("uid") int uid) {
 
 		Usuario usuario;
@@ -64,7 +65,7 @@ public class UsuariosService {
 	@POST()
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response addUser(Usuario nuevo) {
+	public Response addUser(@Valid Usuario nuevo) {
 
 		try {
 			int nid = UsuariosManager.getInstance().createUsuario(nuevo);

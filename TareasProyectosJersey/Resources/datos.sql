@@ -28,7 +28,11 @@ USE `tareas_proyectos`;
 -- Table structure for table `proyecto`
 --
 
+DROP TABLE IF EXISTS `tarea`;
 DROP TABLE IF EXISTS `proyecto`;
+DROP TABLE IF EXISTS `usuario`;
+
+
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `pid` int(11) NOT NULL AUTO_INCREMENT,
   `fecha_fin` datetime DEFAULT NULL,
@@ -58,7 +62,6 @@ INSERT INTO `proyecto` (`pid`, `fecha_fin`, `fecha_inicio`, `titulo`, `responsab
 -- Table structure for table `tarea`
 --
 
-DROP TABLE IF EXISTS `tarea`;
 CREATE TABLE IF NOT EXISTS `tarea` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `duracion` double DEFAULT NULL,
@@ -88,12 +91,12 @@ INSERT INTO `tarea` (`id`, `duracion`, `nombre`, `proyecto`, `responsable`) VALU
 -- Table structure for table `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
@@ -106,10 +109,10 @@ TRUNCATE TABLE `usuario`;
 -- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`uid`, `email`, `foto`, `nombre`) VALUES
-(1, 'r@r.com', 'r.jgpg', 'Ricardo'),
-(2, 'a@a.com', 'ak.jpg', 'Ana K.'),
-(3, 'p@p.com', 'p.jpg', 'Petra');
+INSERT INTO `usuario` (`uid`, `email`, `foto`, `nombre`,`password`) VALUES
+(1, 'r@r.com', 'r.jgpg', 'Ricardo','rcrd'),
+(2, 'a@a.com', 'ak.jpg', 'Ana K.','nk'),
+(3, 'p@p.com', 'p.jpg', 'Petra','ptr');
 
 --
 -- Constraints for dumped tables

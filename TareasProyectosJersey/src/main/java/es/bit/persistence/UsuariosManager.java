@@ -73,5 +73,16 @@ public class UsuariosManager {
 		session.close();
 		return true;
 	}
+
+	public Usuario authUsuario(String email, String password) {
+		Session session = sf.openSession();
+
+		Usuario recU = session.createQuery("FROM Usuario U WHERE U.email = :email AND U.password= :password", Usuario.class)
+				.setParameter("email", email).setParameter("password", password).uniqueResult();
+
+		session.close();
+
+		return recU;
+	}
 	
 }

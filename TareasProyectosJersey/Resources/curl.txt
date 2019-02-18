@@ -1,3 +1,6 @@
+#AUTHENTICATE
+curl localhost:8080/TareasProyectosJersey/rest/authenticate -H "email: r@r.com" -H "password: ric" -X POST
+ 
 #USUARIOS
 curl localhost:8080/TareasProyectosJersey/rest/usuarios -v
  

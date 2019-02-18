@@ -16,12 +16,12 @@ public class TareasManagerTest {
 
 	private static SessionFactory sf = null;
 
-	@BeforeClass
+	//@BeforeClass
 	public static void createSessionFactory() {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	}
 
-	@Test
+	//@Test
 	public void testGetTareas() {
 		try {
 			List<Tarea> listT= TareasManager.getInstance().getTareas();

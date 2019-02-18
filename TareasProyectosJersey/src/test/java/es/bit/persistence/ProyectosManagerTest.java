@@ -17,12 +17,12 @@ public class ProyectosManagerTest {
 
 	private static SessionFactory sf = null;
 
-	@BeforeClass
+	//@BeforeClass
 	public static void createSessionFactory() {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	}
 
-	@Test
+	//@Test
 	public void testGetProyectos() {
 		try {
 			List<Proyecto> listT= ProyectosManager.getInstance().getProyectos();

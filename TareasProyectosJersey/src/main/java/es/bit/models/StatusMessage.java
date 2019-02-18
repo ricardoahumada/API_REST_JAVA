@@ -1,5 +1,7 @@
 package es.bit.models;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StatusMessage {
