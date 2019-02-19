@@ -1,3 +1,7 @@
+#TEST
+curl localhost:8080/TareasProyectosJersey/rest/test
+curl localhost:8080/TareasProyectosJersey/rest/test/track -H "Accept: application/json" -v
+
 #AUTHENTICATE
 curl localhost:8080/TareasProyectosJersey/rest/authenticate -H "email: r@r.com" -H "password: ric" -X POST
  
