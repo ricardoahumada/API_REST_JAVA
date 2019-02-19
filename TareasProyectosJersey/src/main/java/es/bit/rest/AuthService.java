@@ -25,7 +25,7 @@ import es.bit.models.Usuario;
 import es.bit.persistence.UsuariosManager;
 
 @Path("/authenticate")
-public class AuthService extends JSONService {
+public class AuthService extends ServiceUtility {
 
 	private static Logger logger = Logger.getLogger("JSONService");
 

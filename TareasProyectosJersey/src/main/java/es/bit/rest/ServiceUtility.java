@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.ws.rs.Path;
-
 import org.jose4j.jwk.JsonWebKey;
 import org.jose4j.jwk.JsonWebKeySet;
 import org.jose4j.jwk.RsaJwkGenerator;
@@ -15,9 +13,7 @@ import org.jose4j.jwt.consumer.JwtConsumer;
 import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import org.jose4j.lang.JoseException;
 
-
-@Path("/json")
-public class JSONService {
+public class ServiceUtility {
 	private static Logger logger = Logger.getLogger("JSONService");
 	static List<JsonWebKey> jwkList = null;
 

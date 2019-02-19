@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import es.bit.models.StatusMessage;
-import es.bit.rest.JSONService;
+import es.bit.rest.ServiceUtility;
 
 
 //@WebFilter(filterName = "TokenFilter", urlPatterns = { "/api/pedidos/*" })
@@ -32,7 +32,7 @@ public class TokenFilter implements Filter {
 		String token=((HttpServletRequest) request).getHeader("token");
 		logger.info("Filtrando requests: TOKEN:"+token);
 		
-		String email=JSONService.getUserEmailFromToken(token);
+		String email=ServiceUtility.getUserEmailFromToken(token);
 		
 		if(email!=null) {
 			chain.doFilter(request, response);

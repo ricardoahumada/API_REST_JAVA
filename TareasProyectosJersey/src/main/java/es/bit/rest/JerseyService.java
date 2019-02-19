@@ -1,5 +1,6 @@
 package es.bit.rest;
  
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -24,6 +25,7 @@ public class JerseyService
     @GET
 	@Path("/track")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    @Valid
 	public Track getTrackInJSON() {
 
 		Track track = new Track();
@@ -36,11 +38,11 @@ public class JerseyService
 	@POST
 	@Path("/tracks")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response createTrackInJSON(Track track) {
-
-		String result = "Track saved : " + track;
-		Track track2 = new Track();
-		return Response.status(201).entity(track2).build();
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public Response createTrackInJSON(@Valid Track track) {
+		
+		track.setSinger(track.getSinger().toUpperCase());
+		return Response.status(201).entity(track).build();
 
 	}
 

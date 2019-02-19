@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="getFileName" key="selection"/>
+		<item value="2.27" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="2.27"/>
 			<item value="getFileName"/>
 			<item value="ítulo"/>
 			<item value="uración"/>
@@ -17,6 +18,7 @@
 			<item value="com.ricardo.models"/>
 		</list>
 		<list key="replacehistory">
+			<item value="${jersey.version.2}"/>
 			<item value="itulo"/>
 			<item value="uracion"/>
 			<item value="duracion"/>

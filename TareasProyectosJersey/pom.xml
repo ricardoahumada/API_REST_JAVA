@@ -49,6 +49,13 @@
 			<version>${jersey.version}</version>
 		</dependency>
 
+		<!-- for validation -->
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-bean-validation</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
 		<!-- for filter -->
 		<dependency>
 			<groupId>com.fasterxml</groupId>
