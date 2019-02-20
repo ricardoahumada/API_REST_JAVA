@@ -1,10 +1,10 @@
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\rest\AuthService.java
+D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\constraints\SerialNumber.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\models\StatusMessage.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\persistence\TareasManager.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\rest\FileUploadService.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\rest\TareasService.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\models\Usuario.java
-D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\bit\es\constraints\SerialNumber.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\persistence\UsuariosManager.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\rest\ServiceUtility.java
 D:\Shared\MyFiles\BIT\API_REST_JAVA\TareasProyectosJerseyNoBD\src\main\java\es\bit\models\Tarea.java

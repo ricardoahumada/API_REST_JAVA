@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import bit.es.constraints.SerialNumber;
+import es.bit.constraints.SerialNumber;
 
 @XmlRootElement
 public class Track {

@@ -10,10 +10,10 @@ es\bit\rest\ServiceUtility.class
 es\bit\rest\AuthService.class
 es\bit\rest\ProyectosService.class
 es\bit\rest\FileUploadService.class
+es\bit\constraints\SerialNumber$Validator.class
 es\bit\rest\TareasService.class
-bit\es\constraints\SerialNumber$Validator.class
+es\bit\constraints\SerialNumber.class
 es\bit\rest\MyExceptionMapper.class
 es\bit\rest\UsuariosService.class
-bit\es\constraints\SerialNumber.class
 es\bit\models\Proyecto.class
 es\bit\fiters\TokenFilter.class

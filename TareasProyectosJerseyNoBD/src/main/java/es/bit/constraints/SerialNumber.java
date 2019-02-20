@@ -1,4 +1,4 @@
-package bit.es.constraints;
+package es.bit.constraints;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
