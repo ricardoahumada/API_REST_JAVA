@@ -5,13 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.SessionFactory;
-
 import es.bit.models.Proyecto;
 
 public class ProyectosManager {
 	private static ProyectosManager instancia = null;
-	private static SessionFactory sf = null;
 	private static List<Proyecto> proyectos;
 
 	public static ProyectosManager getInstance() throws Exception {

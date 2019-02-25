@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.SessionFactory;
-
 import es.bit.models.Tarea;
 
 public class TareasManager {
 	private static TareasManager instancia = null;
-	private static SessionFactory sf = null;
 	private static List<Tarea> tareas;
 
 	public static TareasManager getInstance() throws Exception {

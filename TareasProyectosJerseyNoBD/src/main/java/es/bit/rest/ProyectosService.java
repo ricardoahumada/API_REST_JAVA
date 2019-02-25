@@ -46,10 +46,21 @@ public class ProyectosService {
 		}
 	}
 
+	
+	@GET()
+	@Path("/inject")
+	@Produces({MediaType.APPLICATION_JSON/*,MediaType.APPLICATION_XML*/})
+	public Response getProyectoInject() {
+
+		String inyeccion="{\"pid\":1,\"titulo\":\"Likes pie & security holes.\"});alert(1);({\"name\":\"Alice\",\"description\":\"Likes XSS.\"}";
+		return Response.status(Response.Status.OK).entity(inyeccion).build();
+
+	}
+	
 	@GET()
 	@Path("/{pid}")
-	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	public Response getUser(@PathParam("pid") int pid) {
+	@Produces({MediaType.APPLICATION_JSON/*,MediaType.APPLICATION_XML*/})
+	public Response getProyecto(@PathParam("pid") int pid) {
 
 		Proyecto proyecto;
 		try {

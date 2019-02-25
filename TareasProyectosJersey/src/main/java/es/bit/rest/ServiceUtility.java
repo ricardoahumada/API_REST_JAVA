@@ -50,7 +50,7 @@ public class ServiceUtility {
 
 			// Validate Token's authenticity and check claims
 			JwtConsumer jwtConsumer = new JwtConsumerBuilder().setRequireExpirationTime()
-					.setAllowedClockSkewInSeconds(30).setRequireSubject().setExpectedIssuer("netmind.com")
+					.setAllowedClockSkewInSeconds(30).setRequireSubject().setExpectedIssuer("bit.es")
 					.setVerificationKey(jwk.getKey()).build();
 
 			// Validate the JWT and process it to the Claims

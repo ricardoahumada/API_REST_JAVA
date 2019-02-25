@@ -4,7 +4,7 @@ curl localhost:8080/TareasProyectosJerseyNoBD/rest/test/track -H "Accept: applic
 curl -X POST -d "{\"title\":\"Chelsey Hotel n2\",\"singer\":\"Leonard Cohen\"}" localhost:8080/TareasProyectosJerseyNoBD/rest/test/tracks -H "Content-Type: application/json" -H "Accept: application/json" -v
 
 #AUTHENTICATE
-curl localhost:8080/TareasProyectosJerseyNoBD/rest/authenticate -H "email: r@r.com" -H "password: ric" -X POST
+curl localhost:8080/TareasProyectosJerseyNoBD/rest/authenticate -H "email: r@r.com" -H "password: rcrd" -X POST
  
 #USUARIOS
 curl localhost:8080/TareasProyectosJerseyNoBD/rest/usuarios -v

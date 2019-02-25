@@ -1,5 +1,15 @@
 <web-app version="3.0">
 	<display-name>Tareas y Proyectos Jersey Application</display-name>
+	<!-- <security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Entire Application</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint> -->
+
 	<servlet>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer
@@ -13,6 +23,8 @@
 			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature
 			</param-value>
 		</init-param>
+		<!-- <init-param> <param-name>jersey.config.server.provider.classnames</param-name> 
+			<param-value>es.bit.filters.XSSFilter</param-value> </init-param> -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -43,8 +55,7 @@
 
 		<init-param>
 			<param-name>cors.supportedHeaders</param-name>
-			<param-value>*, Content-Type, X-Requested-With, username, password,
-				token,Accept, Origin, Last-Modified
+			<param-value>*, Content-Type, X-Requested-With, email, password, token, Accept, Origin, Last-Modified
 			</param-value>
 		</init-param>
 

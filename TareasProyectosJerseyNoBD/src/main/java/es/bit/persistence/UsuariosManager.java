@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-
 import es.bit.models.Usuario;
 
 public class UsuariosManager {
 	private static UsuariosManager instancia = null;
-	private static SessionFactory sf = null;
 	private static List<Usuario> usuarios;
 
 	public static UsuariosManager getInstance() throws Exception {

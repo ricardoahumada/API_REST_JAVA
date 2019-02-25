@@ -1,4 +1,4 @@
-package es.bit.fiters;
+package es.bit.filters;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -19,7 +19,7 @@ import es.bit.models.StatusMessage;
 import es.bit.rest.ServiceUtility;
 
 
-//@WebFilter(filterName = "TokenFilter", urlPatterns = { "/api/pedidos/*" })
+//@WebFilter(filterName = "TokenFilter", urlPatterns = { "/rest/usuarios/*" })
 public class TokenFilter implements Filter {
 	private static final Logger logger = Logger.getLogger(TokenFilter.class.getName());
 
